@@ -9,3 +9,11 @@ module "sns" {
 module "sqs" {
   source = "./sqs"
 }
+
+module "lambda" {
+  source = "./lambda"
+}
+
+module "iam" {
+  source = "./iam"
+}
