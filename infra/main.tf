@@ -12,8 +12,13 @@ module "sqs" {
 
 module "lambda" {
   source = "./lambda"
+  lambda-role-arn = "${module.iam.lambda-role-arn}"
 }
 
 module "iam" {
   source = "./iam"
+}
+
+module "s3" {
+  source = "./s3"
 }
